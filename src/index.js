@@ -24,11 +24,13 @@ class GH_Card extends HTMLElement {
 
 
 	this.template_styles = {};
+
+
   }
 
 
   static get observedAttributes() {
-    return [''];
+    return ['update'];
   }
 
 
@@ -90,6 +92,7 @@ class GH_Card extends HTMLElement {
 				this.build_card();
 			});
 
+
 	}
 
 
@@ -125,15 +128,54 @@ class GH_Card extends HTMLElement {
 
 			// SETTING REPOS COUNT
 			repos.innerHTML = this.userData['repos'].length;
+
+
 	}
 
   connectedCallback() {
+
+	  // CHECK FOR CARD WITH PROJECTS
+	  if(this.getAttribute('gh-mode')==='horizontal-projects'){
+		  this.setAttribute('update', Math.random());
+	  }
 
 	  // GETTING PROFILE DATA
 	  this.fetchData();
 
 	  
 
+
+
+	}
+
+
+	show_repos(){
+		console.log(this.userData['repos']);
+	}
+
+	update_marker(){
+		let delay = (Math.floor(Math.random() * 7)) + 2;
+		setTimeout(()=>{
+			this.show_repos();
+			this.setAttribute('update', Math.random());
+		}, delay * 1000);
+
+
+	}
+
+	attributeChangedCallback(name, oldValue, newValue) {
+		console.log('Some attribute changed.');
+		console.log('CHANGED -> ', name);
+		console.log('OLD -> ', oldValue);
+		console.log('NEW -> ', newValue);
+
+
+		switch(name){
+			case 'update':
+				this.update_marker();
+				break;
+		}
+		
 	}
 }
 

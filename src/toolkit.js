@@ -12,6 +12,9 @@ function create_template(mode ,style, color){
 		case 'horizontal':
 			return(horizontal_layout(style, color));
 			break;
+		case 'horizontal-projects':
+			return(horizontal_layout(style, color));
+			break;
 	}
 
 }

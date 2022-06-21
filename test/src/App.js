@@ -33,6 +33,12 @@ function App() {
 			gh-secondary-color='rgba(0, 100, 20, 1)'
 			/>
 
+			<gh-card 
+			gh-user='benfild'
+			gh-mode='horizontal-projects' // normal, black_white, mio
+			gh-primary-color='rgba(245, 0, 145, 0.5)'
+			gh-secondary-color='rgba(0, 100, 9, 1)'
+			/>
 
 		</div>
     </div>
