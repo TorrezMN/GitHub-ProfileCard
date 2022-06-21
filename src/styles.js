@@ -1,5 +1,11 @@
 
-const basic_style = `
+function basic_style (colors){
+
+
+return (
+
+
+`
 
 *{
 	box-sizing: border-box;
@@ -13,12 +19,25 @@ const basic_style = `
 @media screen and (min-width: 20em) {
 
 	.gh-card{
-		background:gray;
 		max-width:40vw;
 		display:flex;
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
+		position:relative;
+		padding: 4rem 0 4rem 0;
+		font-family: 'system-ui';
+
+	}
+	.gh-card>.svg_top{
+		position:absolute;
+		top:0;
+		z-index:-1;
+	}
+	.gh-card>.svg_bottom{
+		position:absolute;
+		bottom:0;
+		z-index:-1;
 	}
 
 	/* HEADER */
@@ -26,7 +45,7 @@ const basic_style = `
 		position:relative;
 		min-width:100%;
 		min-height:15rem;
-		background:orange;
+		// background:orange;
 		display:flex;
 		flex-direction:column;
 		justify-content:space-around;
@@ -46,7 +65,7 @@ const basic_style = `
 
 	/* CONTENT */
 	.gh-card-content{
-		background:green;
+		// background:green;
 		min-width:100%;
 		min-height:5rem;
 		display:flex;
@@ -57,8 +76,11 @@ const basic_style = `
 	.profile_stats{
 		margin:5px;
 		text-align:center;
-		border:1px solid red;
 		padding:5px;
+		border-bottom: 1px solid ${colors['primary']};
+	}
+	.profile_stats:hover{
+
 	}
 
 
@@ -66,20 +88,31 @@ const basic_style = `
 
 	.gh-card-footer{
 		display:flex;
-		flex-direction:row;
+		flex-direction:column;
 		justify-content:center;
 		align-items:center;
+		min-height:3rem;
 		min-width:100%;
-		background:red;
-
 	}
-	.gh-card-footer>i{
-		font-size:2rem;
+	.footer_icon{
+		min-width:60%;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-around;
+		align-items:center;
+		text-decoration:none;
+		padding:5px;
+		border:2px solid  ${colors['primary']};
+		color: ${colors['primary']};
 		transition:.5s;
 	}
-	.gh-card-footer>i:hover{
-		color:purple;
+	.footer_icon:hover{
+		background:${colors['primary']};
+		color: ${colors['secondary']};
+		border-top-left-radius: 15px;
+		border-bottom-right-radius:15px;
 	}
+
 
 }
 
@@ -89,82 +122,16 @@ const basic_style = `
 @media screen and (max-width: 20em) {
 
 
-	.gh-card{
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-		min-width:100%;
-		background:red;
-	}
-
-	/* HEADER */
-	.gh-card-header{
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-		text-align:center;
-		background:blue;
-	}
-	.profile_bio{
-	}
-	.profile_avatar>img{
-		width:5rem;
-		height:5rem;
-		border-radius:50%;
-		transition:.5s;
-	}
-	.profile_avatar>img:hover{
-		border-radius:45%;
-		
-	}
-
-	/* CONTENT */
-	.gh-card-content{
-		min-width:100%;
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-		text-align:center;
-		background:pink;
-
-	}
-	.profile_stats{
-		min-height:3rem;
-		background:orange;
-		display:flex;
-		flex-direction:row;
-		justify-content:flex-start;
-		align-items:center;
-		text-align:center;
-		margin:3px;
-		min-width:100%;
-	}
-
-
-	/* FOOTER */
-
-	.gh-card-footer{
-
-	}
-	.gh-card-footer>i{
-	}
-	.gh-card-footer>i:hover{
-	}
 
 
 }
 
 
+`
 
 
+)
+}
 
-
-
-
-
-`;
 
 export default basic_style;
