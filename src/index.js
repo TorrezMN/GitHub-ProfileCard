@@ -1,4 +1,4 @@
-import basic_style from './styles.js';
+import {basic_style, horizontal_style} from './styles.js';
 import create_template from './toolkit.js';
 
 
@@ -49,11 +49,13 @@ class GH_Card extends HTMLElement {
 	}
 	set_template_styles(){
 		this.template_styles['normal'] = basic_style(this.component_config['colors']);
+		this.template_styles['horizontal'] = horizontal_style(this.component_config['colors']);
 	}
 
 	set_template(){
 		// Sets the template attribute.
 		this.template.innerHTML = create_template(
+										this.component_config['comp_mode'],
 										this.template_styles[this.component_config['comp_mode']],
 										this.component_config['colors']
 									);
