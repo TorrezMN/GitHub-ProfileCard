@@ -90,7 +90,6 @@ class GH_Card extends HTMLElement {
 		}
 
 
-		console.log(this.userData['repos'])
 
 
 
@@ -235,7 +234,7 @@ class GH_Card extends HTMLElement {
 		setTimeout(()=>{
 			this.show_repos();
 			this.setAttribute('update', Math.random());
-		}, delay * 1000);
+		}, delay * 2000);
 
 
 	}

@@ -2,14 +2,77 @@
 export const repo_layout = (proj)=>{
 	// Project basic layout for github repos.
 	let repo_template = document.createElement('template');
+	const get_langs = ()=>{
+		let langs = [];
+
+		if(typeof(proj['lang_keys']) !== "undefined"){
+
+			proj['lang_keys'].map((p)=>{
+
+				langs.push(
+
+			`
+			<span class='gh-project-lang'>  ${p}</span>
+			`
+				)
+
+
+
+			})
+
+		}
+		return(
+
+			`
+				<div class='gh-repo-langs'>
+					${langs}
+				</div>
+			`
+
+
+		)
+	}
+
+	const get_proj_desc = ()=>{
+
+		if(typeof(proj['description'])!== "undefined" && proj['description']!==null   ){
+			return(`
+			
+			<div class='gh-repo-desc'>
+				<p class='gh-repo-desc'>DESC : ${proj['description']}</p>
+			</div>
+
+
+			`);
+			
+			}
+			else{
+				return(
+
+					`
+					<div class='gh-repo-desc-blank'>
+					</div>
+					`
+				)
+			}
+		}
+
+
+
+
     repo_template.innerHTML = 
 			`
 			<div class='gh-repo-container'>
-				<div class='gh-repo-name'>
-					<p>${proj['name']}!</p>
+				<div class='gh-repo-header'>
+					<p class='gh-repo-name'>NAME : ${proj['name']}!</p>
+					${get_proj_desc()}
 				</div>
 
+					${get_langs()}
+
+
 			</div>
+			========================================
 
 			`;
     return (repo_template.content);
