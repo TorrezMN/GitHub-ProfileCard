@@ -1,6 +1,7 @@
 import {basic_style, horizontal_style} from './styles.js';
 import create_template from './toolkit.js';
 
+import {repo_layout} from './layouts.js';
 
 
 
@@ -107,6 +108,7 @@ class GH_Card extends HTMLElement {
 			let fallowers = this._root.querySelector('.fallowers>.fallowers_count');
 			let fallowing = this._root.querySelector('.fallowing>.fallowing_count');
 			let repos = this._root.querySelector('.repos>.repos_count');
+			let repos_container = this._root.querySelector('.gh-card-projects');
 
 
 			// SETTING AVATAR IMAGE
@@ -125,11 +127,21 @@ class GH_Card extends HTMLElement {
 			// SETTING FALLOWING
 			fallowing.innerHTML = this.userData['fallowing'];
 
-
 			// SETTING REPOS COUNT
 			repos.innerHTML = this.userData['repos'].length;
 
 
+
+
+			if(this.getAttribute('gh-mode')=='horizontal-projects'){
+				// SETTING REPOS
+				let index_repo;
+				for(let i of [...Array(3).keys()]){
+					index_repo = Math.floor(Math.random()*this.userData['repos'].length);
+					repos_container.appendChild(repo_layout(this.userData['repos'][index_repo]));
+				}
+
+			}
 	}
 
   connectedCallback() {
@@ -150,7 +162,23 @@ class GH_Card extends HTMLElement {
 
 
 	show_repos(){
-		console.log(this.userData['repos']);
+		let container = this._root.querySelector('.gh-card-projects');
+		let index_repo;
+
+
+		if(this.getAttribute('gh-show-n')){
+			console.log('SHOW ', this.getAttribute('gh-show-n'));
+		}else{
+			// Cleaning the container.
+			container.innerHTML = '';
+
+			for(let i of [...Array(3).keys()]){
+				index_repo = Math.floor(Math.random()*this.userData['repos'].length);
+				container.appendChild(repo_layout(this.userData['repos'][index_repo]));
+			}
+
+		}
+		
 	}
 
 	update_marker(){
@@ -164,10 +192,10 @@ class GH_Card extends HTMLElement {
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
-		console.log('Some attribute changed.');
-		console.log('CHANGED -> ', name);
-		console.log('OLD -> ', oldValue);
-		console.log('NEW -> ', newValue);
+		// console.log('Some attribute changed.');
+		// console.log('CHANGED -> ', name);
+		// console.log('OLD -> ', oldValue);
+		// console.log('NEW -> ', newValue);
 
 
 		switch(name){

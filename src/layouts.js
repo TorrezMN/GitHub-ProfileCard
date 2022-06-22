@@ -1,4 +1,23 @@
 
+export const repo_layout = (proj)=>{
+	// Project basic layout for github repos.
+	let repo_template = document.createElement('template');
+    repo_template.innerHTML = 
+			`
+			<div class='gh-repo-container'>
+				<div class='gh-repo-name'>
+					<p>${proj['name']}!</p>
+				</div>
+
+			</div>
+
+			`;
+    return (repo_template.content);
+
+}
+
+
+
 export const horizontal_layout =(style, color)=>{
 
 
@@ -28,6 +47,7 @@ export const horizontal_layout =(style, color)=>{
 							class='svg_top' 
 							xmlns="http://www.w3.org/2000/svg" 
 							viewBox="0 0 1440 320"><path fill="${color['primary']}" fill-opacity="1" d="M0,160L60,149.3C120,139,240,117,360,101.3C480,85,600,75,720,85.3C840,96,960,128,1080,160C1200,192,1320,224,1380,240L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+
 							<div class='gh-card-header'>
 								<a class='profile_avatar' href='#'>
 									<img src='#' atl='Profile picture.'/>
@@ -49,6 +69,9 @@ export const horizontal_layout =(style, color)=>{
 										<p>Repositories</p>
 										<p class='repos_count'></p>
 									</div>
+								</div>
+								<div class='gh-card-projects'>
+								
 								</div>
 								<div class='gh-card-footer'>
 									<a class='footer_icon' href='#'>
