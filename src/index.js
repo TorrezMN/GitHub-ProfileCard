@@ -1,5 +1,5 @@
 import {basic_style, horizontal_style} from './styles.js';
-import create_template from './toolkit.js';
+import create_template from './template_engine.js';
 
 import {repo_layout} from './layouts.js';
 
@@ -51,6 +51,7 @@ class GH_Card extends HTMLElement {
 		this.set_template_styles();
 	}
 	set_template_styles(){
+		// SETS THE TEMPLATE STYLES
 		this.template_styles['normal'] = basic_style(this.component_config['colors']);
 		this.template_styles['horizontal'] = horizontal_style(this.component_config['colors']);
 	}
@@ -68,6 +69,7 @@ class GH_Card extends HTMLElement {
 
 
 	get_repo_langs(){
+		// Fetch the github api and gets the languages used for each of the repos.
 		let url_repos_langs = [];
 
 		// GETTING URLS
@@ -98,6 +100,7 @@ class GH_Card extends HTMLElement {
 	}
 
 	fetchData(){
+		// Fetch githubs api for basic user data.
 		let github_profile_url = `https://api.github.com/users/${this.getAttribute('gh-user')}`;
 		let fallowers_url = `https://api.github.com/users/${this.getAttribute('gh-user')}/followers`;
 		let fallowing_url = `https://api.github.com/users/${this.getAttribute('gh-user')}/following`;
@@ -146,6 +149,8 @@ class GH_Card extends HTMLElement {
 
 
 	build_card (){
+		// Gets and replace the data in the html template card with the user data.
+
 
 			// SETTING ATTIBUTES
 			let avatar_img = this._root.querySelector(".profile_avatar>img");
@@ -210,6 +215,7 @@ class GH_Card extends HTMLElement {
 
 
 	show_repos(){
+		// Shows the repos of the user.
 		let container = this._root.querySelector('.gh-card-projects');
 		let index_repo;
 
@@ -230,6 +236,7 @@ class GH_Card extends HTMLElement {
 	}
 
 	update_marker(){
+		// Update the marker to fire a re-render of the component projects.
 		let delay = (Math.floor(Math.random() * 7)) + 2;
 		setTimeout(()=>{
 			this.show_repos();
