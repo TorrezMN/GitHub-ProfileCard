@@ -65,6 +65,39 @@ class GH_Card extends HTMLElement {
 		this._root.appendChild(this.template.content.cloneNode(true));
 	}
 
+
+
+	get_repo_langs(){
+		let url_repos_langs = [];
+
+		// GETTING URLS
+		for(let i=0; i<=this.userData['repos'].length; i++){
+			// CHECK IF 'UNDEFINED'
+			if(typeof this.userData['repos'][i] !== 'undefined'){
+				// GET DATA
+				fetch(this.userData['repos'][i]['languages_url'])
+				  .then(response => response.json())
+				  .then((data)=>{
+					  let lang_keys = Object.keys(data);
+
+					  if(lang_keys.length>0){
+						  this.userData['repos'][i]['lang_keys'] = lang_keys;
+					  }
+
+
+				  });
+			}
+		}
+
+
+		console.log(this.userData['repos'])
+
+
+
+
+
+	}
+
 	fetchData(){
 		let github_profile_url = `https://api.github.com/users/${this.getAttribute('gh-user')}`;
 		let fallowers_url = `https://api.github.com/users/${this.getAttribute('gh-user')}/followers`;
@@ -73,7 +106,9 @@ class GH_Card extends HTMLElement {
 
 		let urls = [github_profile_url, fallowers_url, fallowing_url, repos_url];
 
-		Promise.all(urls.map(url =>
+		const get_data = ()=>{
+
+			Promise.all(urls.map(url =>
 				fetch(url).then(resp => resp.json())
 			)).then(resp => {
 				// SET SER PROFILE
@@ -91,7 +126,21 @@ class GH_Card extends HTMLElement {
 				this.set_template();
 				// BUILDING THE CARD
 				this.build_card();
+				// IF ITS HORIZONTAL with PROJECTS
+				if(this.getAttribute('gh-mode')=='horizontal-projects'){
+					// GETS REPO DATA
+					this.get_repo_langs();
+				}
+
 			});
+		};
+
+
+
+		// GETS USER DATA
+		get_data();
+
+
 
 
 	}
