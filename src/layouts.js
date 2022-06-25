@@ -1,45 +1,32 @@
 
 export const repo_layout = (proj)=>{
+	console.log(proj)
 	// Project basic layout for github repos.
 	let repo_template = document.createElement('template');
+	let langs='';
+
 	const get_langs = ()=>{
-		let langs = [];
 
 		if(typeof(proj['lang_keys']) !== "undefined"){
 
 			proj['lang_keys'].map((p)=>{
-
-				langs.push(
-
-			`
-			<span class='gh-project-lang'>  ${p}</span>
-			`
-				)
-
-
-
+				langs+=`<span class='gh-project-lang-tag'>${p}</span>`;
 			})
 
 		}
-		return(
-
-			`
-				<div class='gh-repo-langs'>
-					${langs}
-				</div>
-			`
-
-
-		)
+		return(`<div class='gh-repo-langs'>${langs}</div>`)
 	}
+	
 
 	const get_proj_desc = ()=>{
 
 		if(typeof(proj['description'])!== "undefined" && proj['description']!==null   ){
+
+
 			return(`
 			
 			<div class='gh-repo-desc'>
-				<p class='gh-repo-desc'>DESC : ${proj['description']}</p>
+				<p class='gh-repo-desc-text'>${proj['description']}</p>
 			</div>
 
 
@@ -63,23 +50,84 @@ export const repo_layout = (proj)=>{
     repo_template.innerHTML = 
 			`
 			<div class='gh-repo-container'>
+				<a class='gh-repo-link' href='${proj['html_url']}'><i class="fa fa-github"></i></a>
 				<div class='gh-repo-header'>
-					<p class='gh-repo-name'>NAME : ${proj['name']}!</p>
+					<p class='gh-repo-name'>${proj['name']}!</p>
 					${get_proj_desc()}
 				</div>
-
 					${get_langs()}
-
-
 			</div>
-			========================================
-
 			`;
     return (repo_template.content);
 
 }
 
 
+export const horizontal_projects_layout =(style, color)=>{
+
+	return(
+			`
+				<html lang="en">
+				  <head>
+					<meta charset="UTF-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<meta http-equiv="X-UA-Compatible" content="ie=edge">
+					<link rel="preconnect" href="https://fonts.googleapis.com">
+
+					<!-- Awesome Fonts -->
+						<link
+						  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+						  rel="stylesheet"
+						  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+						  crossorigin="anonymous"
+						/>
+					<style>
+						${style}
+					</style>
+				  </head>
+				  <body>
+					<div class='gh-card'>
+
+							<div class='gh-card-header'>
+								<a class='profile_avatar' href='#'>
+									<img src='#' atl='Profile picture.'/>
+								</a>
+								<p class='profile_name'></p>
+								<p class='profile_bio'></p>
+							</div>
+							<div class='gh-card-body'>
+								<div class='gh-card-stats'>
+									<div class='profile_stats fallowers'>
+										<p>Fallowers</p>
+										<p class='fallowers_count'></p>
+									</div>
+									<div class='profile_stats fallowing'>
+										<p>Fallowing</p>
+										<p class='fallowing_count'></p>
+									</div>
+									<div class='profile_stats repos'>
+										<p>Repositories</p>
+										<p class='repos_count'></p>
+									</div>
+								</div>
+								<div class='gh-card-projects'>
+
+								</div>
+								<div class='gh-card-footer'>
+									<a class='footer_icon' href='#'>
+										<i class="fa fa-github-square"></i>
+										<p> My GitHub </p>
+									</a>
+								</div>
+							</div>
+					</div>
+
+
+				  </body>
+				</html>
+
+					`)
+};
 
 export const horizontal_layout =(style, color)=>{
 

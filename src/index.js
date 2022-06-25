@@ -1,4 +1,4 @@
-import {basic_style, horizontal_style} from './styles.js';
+import {basic_style, horizontal_style, horizontal_projects_styles} from './styles.js';
 import create_template from './template_engine.js';
 
 import {repo_layout} from './layouts.js';
@@ -51,9 +51,10 @@ class GH_Card extends HTMLElement {
 		this.set_template_styles();
 	}
 	set_template_styles(){
-		// SETS THE TEMPLATE STYLES
+		// SETS THE TEMPLATE STYLES IN THE COMPONENT ATTRIBUTES
 		this.template_styles['normal'] = basic_style(this.component_config['colors']);
 		this.template_styles['horizontal'] = horizontal_style(this.component_config['colors']);
+		this.template_styles['horizontal-projects'] = horizontal_projects_styles(this.component_config['colors']);
 	}
 
 	set_template(){
@@ -230,6 +231,7 @@ class GH_Card extends HTMLElement {
 				index_repo = Math.floor(Math.random()*this.userData['repos'].length);
 				container.appendChild(repo_layout(this.userData['repos'][index_repo]));
 			}
+
 
 		}
 		

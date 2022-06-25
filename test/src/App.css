@@ -13,24 +13,11 @@
 	min-height:100vh;
 	display:flex;
 	flex-direction:column;
-	justify-content:space-around;
+	justify-content:center;
 	align-items:center;
+	background:rgba(0,0,0,.2);
 }
 
 
-.vertical_cards{
-	min-width:100%;
-	min-height:100vh;
-	display:flex;
-	flex-direction:row;
-	justify-content:space-around;
-	align-items:center;
-}
-.horizontal_cards{
-	min-width:100%;
-	min-height:100vh;
-	display:flex;
-	flex-direction:column;
-	justify-content:space-around;
-	align-items:center;
-}
+
+
