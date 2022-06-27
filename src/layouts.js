@@ -1,6 +1,5 @@
 
 export const repo_layout = (proj)=>{
-	console.log(proj)
 	// Project basic layout for github repos.
 	let repo_template = document.createElement('template');
 	let langs='';
@@ -94,6 +93,9 @@ export const horizontal_projects_layout =(style, color)=>{
 								</a>
 								<p class='profile_name'></p>
 								<p class='profile_bio'></p>
+
+          
+
 							</div>
 							<div class='gh-card-body'>
 								<div class='gh-card-stats'>

@@ -23,7 +23,6 @@ class GH_Card extends HTMLElement {
 		'repos': null,
 	};
 
-
 	this.template_styles = {};
 
 
@@ -202,6 +201,8 @@ class GH_Card extends HTMLElement {
 
 	  // CHECK FOR CARD WITH PROJECTS
 	  if(this.getAttribute('gh-mode')==='horizontal-projects'){
+
+
 		  this.setAttribute('update', Math.random());
 	  }
 
