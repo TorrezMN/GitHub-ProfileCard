@@ -51,6 +51,9 @@ return (
 		justify-content:space-around;
 		align-items:center;
 	}
+	.profile_name{
+		font-size:2rem;
+	}
 	.profile_bio{
 		width:80%;
 		text-align:center;
@@ -121,6 +124,107 @@ return (
 /* SMALL DEVICES */
 @media screen and (max-width: 20em) {
 
+
+	.gh-card{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		position:relative;
+		padding: 4rem 0 4rem 0;
+		font-family: 'system-ui';
+		min-width:100vw;
+
+	}
+	.gh-card>.svg_top{
+		position:absolute;
+		top:0;
+		z-index:-1;
+	}
+	.gh-card>.svg_bottom{
+		position:absolute;
+		bottom:0;
+		z-index:-1;
+	}
+
+	/* HEADER */
+	.gh-card-header{
+		position:relative;
+		min-width:100%;
+		min-height:15rem;
+		// background:orange;
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+		align-items:center;
+	}
+	.profile_name{
+		font-weight:bold;
+	}
+	.profile_bio{
+		width:80%;
+		text-align:center;
+	}
+	.profile_avatar>img{
+		width:7rem;
+		height:7rem;
+		border-radius:50%;
+	}
+	.profile_avatar>img:hover{
+	}
+
+	/* CONTENT */
+	.gh-card-content{
+		// background:green;
+		min-width:100%;
+		min-height:5rem;
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+		align-items:center;
+	}
+	.profile_stats{
+		min-width:9rem;
+		border-radius:5px;
+		margin:5px;
+		text-align:center;
+		padding:5px;
+		border-bottom: 1px solid ${colors['primary']};
+		background:rgba(0,0,0,.2);
+	}
+	.profile_stats:hover{
+
+	}
+
+
+	/* FOOTER */
+
+	.gh-card-footer{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		min-height:3rem;
+		min-width:100%;
+	}
+	.footer_icon{
+		min-width:60%;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-around;
+		align-items:center;
+		text-decoration:none;
+		padding:5px;
+		border:2px solid  ${colors['primary']};
+		color: ${colors['primary']};
+		transition:.5s;
+	}
+	.footer_icon:hover{
+		background:${colors['primary']};
+		color: ${colors['secondary']};
+		border-top-left-radius: 15px;
+		border-bottom-right-radius:15px;
+	}
 
 
 
@@ -673,6 +777,105 @@ return (
 /* SMALL DEVICES */
 @media screen and (max-width: 20em) {
 
+	.gh-card{
+		font-family: 'system-ui';
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+		align-items:center;
+		width:100vw;
+		min-height:100vh;
+		position:relative;
+		padding:2rem 0 2rem 0;
+	}
+	.gh-card>.svg_top{
+		position:absolute;
+		top:0;
+		z-index:-1;
+	}
+	.gh-card>.svg_bottom{
+		position:absolute;
+		bottom:0;
+		z-index:-1;
+	}
+	/* HEADER */
+	.gh-card-header{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		min-height:50vh;
+		min-width:80vw;
+	}
+	.profile_name{
+		font-size:2rem;
+		color: ${colors['secondary']};
+	}
+	.profile_bio{
+		width:80vw;
+		text-align:center;
+		font-size:1rem;
+		color: ${colors['secondary']};
+	}
+	.profile_avatar{
+		border:2px solid ${colors['secondary']};
+		border-radius:50%;
+		padding:5px;
+	}
+	.profile_avatar>img{
+		width:7rem;
+		height:7rem;
+		border-radius:50%;
+	}
+	.profile_avatar>img:hover{
+	}
+	/* CONTENT */
+	.gh-card-body{
+		min-width:80vw;
+	}
+	.gh-card-content{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+	}
+	.profile_stats{
+		min-width:5rem;
+		min-height:3rem;
+		margin:1rem;
+		border-bottom: 1px solid ${colors['primary']};
+		text-align:center;
+		color: ${colors['secondary']};
+	}
+	.profile_stats:hover{
+	}
+	/* FOOTER */
+	.gh-card-footer{
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+	}
+	.footer_icon>i{
+		margin:5px;
+	}
+	.footer_icon{
+		width:50vw;
+		text-decoration:none;
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+		border:2px solid  ${colors['primary']};
+		color: ${colors['primary']};
+		border-radius:5px;
+		transition:.5s;
+	}
+	.footer_icon:hover{
+		background:${colors['primary']};
+		color: ${colors['secondary']};
+
+	}
 
 }
 

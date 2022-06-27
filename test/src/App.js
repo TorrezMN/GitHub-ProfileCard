@@ -8,7 +8,7 @@ import 'gh-card';
 function App() {
   return (
     <div className="App">
-	  {/*
+
 			<gh-card 
 			gh-user='TorrezMN'
 			gh-mode='normal' // normal, mio
@@ -29,8 +29,6 @@ function App() {
 			gh-primary-color='rgba(245, 40, 145, 0.8)'
 			gh-secondary-color='rgba(0, 100, 20, 1)'
 			/>
-			gh-user='benfild'
-		*/}
 
 			<gh-card 
 			gh-user='TorrezMN'
