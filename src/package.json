@@ -1,12 +1,17 @@
 {
   "name": "@torrez_mn/gh-card",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small component to display Github profiles.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["github", "card", "profile card", "Github card"],
+  "keywords": [
+    "github",
+    "card",
+    "profile card",
+    "Github card"
+  ],
   "author": "TM",
   "license": "ISC"
 }
