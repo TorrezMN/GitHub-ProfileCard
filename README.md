@@ -31,47 +31,96 @@ Now you can use the component in three diferent ways.
 
 ### Normal
 
-> ***See a *Code Sandbox* demo [here.](https://wl612z.csb.app/)***
+> ***See a *Code Sandbox* React demo [here.](https://wl612z.csb.app/)***
 
 Create a small card with a brief description and some statistical data of the user.
 
 
 ```
-	<gh-card 
-	gh-user='yogonza524'
-	gh-mode='normal' 
-	gh-primary-color='rgba(0,23,255,.5)'
-	gh-secondary-color='whitesmoke'
-	/>
+{/* REACT DEMO */}
+
+{/* IMPORTS */}
+import '@torrez_mn/gh-card';
+
+function MyComponent() {
+	return (
+		<div>
+
+			{/* COMPONENT */}
+			<gh-card 
+			gh-user='yogonza524'
+			gh-mode='normal' 
+			gh-primary-color='rgba(0,23,255,.5)'
+			gh-secondary-color='whitesmoke'
+			/>
+
+		</div>
+	);
+}
+
+export default MyComponent;
 
 ```
 ### Normal - Horizontal
 
-> ***See a *Code Sandbox* demo [here.](https://t2r116.csb.app/)***
+> ***See a *Code Sandbox* React demo [here.](https://t2r116.csb.app/)***
 
 Produces the same result as the normal version but horizontally.
 
 ```
-	<gh-card 
-	gh-user='getify'
-	gh-mode='horizontal'
-	gh-primary-color='rgba(245, 40, 145, 0.8)'
-	gh-secondary-color='rgba(0, 100, 20, 1)'
-	/>
 
+{/* REACT DEMO */}
+
+{/* IMPORTS */}
+import '@torrez_mn/gh-card';
+
+function MyComponent() {
+	return (
+		<div>
+
+			{/* COMPONENT */}
+			<gh-card 
+			gh-user='getify'
+			gh-mode='horizontal'
+			gh-primary-color='rgba(245, 40, 145, 0.8)'
+			gh-secondary-color='rgba(0, 100, 20, 1)'
+			/>
+
+		</div>
+	);
+}
+
+export default MyComponent;
 ```
 ### Horizontal with Projects 
 
-> ***See a *Code Sandbox* demo [here.](https://befdkg.csb.app/)***
+> ***See a *Code Sandbox* React demo [here.](https://befdkg.csb.app/)***
 
 Produce a full screen landscape version with public projects on github. Randomly displays data from the user's public projects and the languages used.
 
 
 ```
-	<gh-card 
-	gh-user='TorrezMN'
-	gh-mode='horizontal-projects' 
-	/>
+
+{/* REACT DEMO */}
+
+{/* IMPORTS */}
+import '@torrez_mn/gh-card';
+
+function MyComponent() {
+	return (
+		<div className="App">
+
+			{/* COMPONENT */}
+			<gh-card 
+			gh-user='TorrezMN'
+			gh-mode='horizontal-projects' 
+			/>
+
+		</div>
+	);
+}
+
+export default MyComponent;
 ```
 
 ## Docs
