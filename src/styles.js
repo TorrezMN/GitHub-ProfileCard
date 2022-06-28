@@ -406,12 +406,14 @@ return (
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
+		flex-wrap:wrap;
 	}
 	.gh-project-lang-tag{
 		margin:5px;
 		background:black;
 		color:whitesmoke;
 		padding: 3px 5px 3px 5px;
+		border-radius:5px;
 	}
 	/* FOOTER */
 	.gh-card-footer{
