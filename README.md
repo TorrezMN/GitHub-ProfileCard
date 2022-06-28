@@ -30,7 +30,11 @@ Now you can use the component in three diferent ways.
 
 
 ### Normal
+
+> ***See a *Code Sandbox* demo [here.](https://wl612z.csb.app/)***
+
 Create a small card with a brief description and some statistical data of the user.
+
 
 ```
 	<gh-card 
@@ -42,8 +46,10 @@ Create a small card with a brief description and some statistical data of the us
 
 ```
 ### Normal - Horizontal
-Produces the same result as the normal version but horizontally.
 
+> ***See a *Code Sandbox* demo [here.](https://t2r116.csb.app/)***
+
+Produces the same result as the normal version but horizontally.
 
 ```
 	<gh-card 
@@ -55,6 +61,9 @@ Produces the same result as the normal version but horizontally.
 
 ```
 ### Horizontal with Projects 
+
+> ***See a *Code Sandbox* demo [here.](https://befdkg.csb.app/)***
+
 Produce a full screen landscape version with public projects on github. Randomly displays data from the user's public projects and the languages used.
 
 
