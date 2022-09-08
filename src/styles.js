@@ -19,15 +19,14 @@ return (
 @media screen and (min-width: 20em) {
 
 	.gh-card{
-		max-width:40vw;
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-		position:relative;
-		padding: 4rem 0 4rem 0;
-		font-family: 'system-ui';
-
+    max-width:40vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding: 4rem 0 4rem 0;
+    font-family: 'system-ui';
 	}
 	.gh-card>.svg_top{
 		position:absolute;
@@ -45,13 +44,15 @@ return (
 		position:relative;
 		min-width:100%;
 		min-height:15rem;
-		// background:orange;
+    // background:orange;
 		display:flex;
 		flex-direction:column;
 		justify-content:space-around;
 		align-items:center;
 	}
 	.profile_name{
+    min-width:100%;
+    margin-bottom:2rem;
 		font-size:2rem;
 	}
 	.profile_bio{
@@ -59,8 +60,8 @@ return (
 		text-align:center;
 	}
 	.profile_avatar>img{
-		width:7rem;
-		height:7rem;
+		width:10rem;
+		height:10rem;
 		border-radius:50%;
 	}
 	.profile_avatar>img:hover{
@@ -76,16 +77,26 @@ return (
 		justify-content:space-around;
 		align-items:center;
 	}
+  .stats_container{
+    min-width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+  }
 	.profile_stats{
 		margin:5px;
 		text-align:center;
 		padding:5px;
 		border-bottom: 1px solid ${colors['primary']};
+    transition:.5s;
 	}
 	.profile_stats:hover{
-
+    background: ${colors['primary']};
+    color:whitesmoke;
+    border-radius:10px;
 	}
-
 
 	/* FOOTER */
 
@@ -98,15 +109,15 @@ return (
 		min-width:100%;
 	}
 	.footer_icon{
-		min-width:60%;
+		min-width:40%;
 		display:flex;
 		flex-direction:row;
 		justify-content:space-around;
 		align-items:center;
 		text-decoration:none;
 		padding:5px;
-		border:2px solid  ${colors['primary']};
-		color: ${colors['primary']};
+    border:2px solid  ${colors['primary']};
+    color: ${colors['primary']};
 		transition:.5s;
 	}
 	.footer_icon:hover{
@@ -122,19 +133,18 @@ return (
 
 
 /* SMALL DEVICES */
-@media screen and (max-width: 20em) {
 
+@media only screen and (max-width: 400px) {
 
 	.gh-card{
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-		position:relative;
-		padding: 4rem 0 4rem 0;
-		font-family: 'system-ui';
-		min-width:100vw;
-
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding: 4rem 0 4rem 0;
+    font-family: 'system-ui';
+    min-width:100vw;
 	}
 	.gh-card>.svg_top{
 		position:absolute;
@@ -152,7 +162,7 @@ return (
 		position:relative;
 		min-width:100%;
 		min-height:15rem;
-		// background:orange;
+    // background:orange;
 		display:flex;
 		flex-direction:column;
 		justify-content:space-around;
@@ -164,6 +174,7 @@ return (
 	.profile_bio{
 		width:80%;
 		text-align:center;
+    margin-bottom:1.5rem;
 	}
 	.profile_avatar>img{
 		width:7rem;
@@ -173,27 +184,33 @@ return (
 	.profile_avatar>img:hover{
 	}
 
-	/* CONTENT */
-	.gh-card-content{
-		// background:green;
-		min-width:100%;
-		min-height:5rem;
-		display:flex;
-		flex-direction:column;
-		justify-content:space-around;
-		align-items:center;
-	}
-	.profile_stats{
-		min-width:9rem;
-		border-radius:5px;
-		margin:5px;
-		text-align:center;
-		padding:5px;
-		border-bottom: 1px solid ${colors['primary']};
-		background:rgba(0,0,0,.2);
-	}
+  CONTENT
+  .gh-card-content{
+    background:green;
+    min-width:100%;
+    min-height:5rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .stats_container{
+    min-width:100%;
+    display:Flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  .profile_stats{
+    min-width:60vw;
+    border-radius:5px;
+    text-align:center;
+    padding:5px;
+    border-bottom: 1px solid ${colors['primary']};
+    background:rgba(0,0,0,.2);
+  }
 	.profile_stats:hover{
-
+    margin-left:30%;
 	}
 
 
@@ -208,7 +225,7 @@ return (
 		min-width:100%;
 	}
 	.footer_icon{
-		min-width:60%;
+		min-width:40%;
 		display:flex;
 		flex-direction:row;
 		justify-content:space-around;
