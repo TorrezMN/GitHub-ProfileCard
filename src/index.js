@@ -23,6 +23,11 @@ class GH_Card extends HTMLElement {
 		'repos': null,
 	};
 
+	// SET ICON FONTS!
+	document.head.innerHTML += '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">';
+
+
+
 	this.template_styles = {};
 
 
@@ -171,8 +176,16 @@ class GH_Card extends HTMLElement {
 			foot_icon.href = this.userData['data']['html_url']
 
 			// SETTING THE BIO
-			bio.innerHTML = this.userData['data']['bio'];
+
+      if(this.userData['data']['bio'] !== null){
+        bio.innerHTML = this.userData['data']['bio'];
+      }else{
+        // Delete 'profile_bio' if user bio is empty or null.
+        this.remove_bio();
+      }
+
 			name.innerHTML = this.userData['data']['name'];
+
 
 			// SETTING FALLOWERS
 			fallowers.innerHTML = this.userData['fallowers'];
@@ -197,6 +210,18 @@ class GH_Card extends HTMLElement {
 			}
 	}
 
+  remove_bio(){
+    let bio = this._root.querySelector('.profile_bio');
+    // Removin the Bio.
+    bio.remove();
+
+    // Adding 'no_bio' css class.
+    let card = this._root.querySelector('.gh-card');
+    card.classList.add("no_bio");
+
+
+
+  }
   connectedCallback() {
 
 	  // CHECK FOR CARD WITH PROJECTS

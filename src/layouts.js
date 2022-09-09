@@ -170,18 +170,20 @@ export const horizontal_layout =(style, color)=>{
 							</div>
 							<div class='gh-card-body'>
 								<div class='gh-card-content'>
-									<div class='profile_stats fallowers'>
-										<p>Fallowers</p>
-										<p class='fallowers_count'></p>
-									</div>
-									<div class='profile_stats fallowing'>
-										<p>Fallowing</p>
-										<p class='fallowing_count'></p>
-									</div>
-									<div class='profile_stats repos'>
-										<p>Repositories</p>
-										<p class='repos_count'></p>
-									</div>
+                  <div class='stats_container'>
+                    <div class='profile_stats fallowers'>
+                      <p>Fallowers</p>
+                      <p class='fallowers_count'></p>
+                    </div>
+                    <div class='profile_stats fallowing'>
+                      <p>Fallowing</p>
+                      <p class='fallowing_count'></p>
+                    </div>
+                    <div class='profile_stats repos'>
+                      <p>Repositories</p>
+                      <p class='repos_count'></p>
+                    </div>
+                  </div>
 								</div>
 								<div class='gh-card-projects'>
 								
