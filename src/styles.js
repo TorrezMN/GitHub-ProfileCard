@@ -19,15 +19,14 @@ return (
 @media screen and (min-width: 20em) {
 
 	.gh-card{
-		max-width:40vw;
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-		position:relative;
-		padding: 4rem 0 4rem 0;
-		font-family: 'system-ui';
-
+    max-width:40vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding: 4rem 0 4rem 0;
+    font-family: 'system-ui';
 	}
 	.gh-card>.svg_top{
 		position:absolute;
@@ -45,13 +44,15 @@ return (
 		position:relative;
 		min-width:100%;
 		min-height:15rem;
-		// background:orange;
+    // background:orange;
 		display:flex;
 		flex-direction:column;
 		justify-content:space-around;
 		align-items:center;
 	}
 	.profile_name{
+    min-width:100%;
+    margin-bottom:2rem;
 		font-size:2rem;
 	}
 	.profile_bio{
@@ -59,8 +60,8 @@ return (
 		text-align:center;
 	}
 	.profile_avatar>img{
-		width:7rem;
-		height:7rem;
+		width:10rem;
+		height:10rem;
 		border-radius:50%;
 	}
 	.profile_avatar>img:hover{
@@ -76,16 +77,26 @@ return (
 		justify-content:space-around;
 		align-items:center;
 	}
+  .stats_container{
+    min-width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+  }
 	.profile_stats{
 		margin:5px;
 		text-align:center;
 		padding:5px;
 		border-bottom: 1px solid ${colors['primary']};
+    transition:.5s;
 	}
 	.profile_stats:hover{
-
+    background: ${colors['primary']};
+    color:whitesmoke;
+    border-radius:10px;
 	}
-
 
 	/* FOOTER */
 
@@ -98,15 +109,15 @@ return (
 		min-width:100%;
 	}
 	.footer_icon{
-		min-width:60%;
+		min-width:40%;
 		display:flex;
 		flex-direction:row;
 		justify-content:space-around;
 		align-items:center;
 		text-decoration:none;
 		padding:5px;
-		border:2px solid  ${colors['primary']};
-		color: ${colors['primary']};
+    border:2px solid  ${colors['primary']};
+    color: ${colors['primary']};
 		transition:.5s;
 	}
 	.footer_icon:hover{
@@ -122,19 +133,18 @@ return (
 
 
 /* SMALL DEVICES */
-@media screen and (max-width: 20em) {
 
+@media only screen and (max-width: 400px) {
 
 	.gh-card{
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-		position:relative;
-		padding: 4rem 0 4rem 0;
-		font-family: 'system-ui';
-		min-width:100vw;
-
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding: 4rem 0 4rem 0;
+    font-family: 'system-ui';
+    min-width:100vw;
 	}
 	.gh-card>.svg_top{
 		position:absolute;
@@ -152,7 +162,7 @@ return (
 		position:relative;
 		min-width:100%;
 		min-height:15rem;
-		// background:orange;
+    // background:orange;
 		display:flex;
 		flex-direction:column;
 		justify-content:space-around;
@@ -164,6 +174,7 @@ return (
 	.profile_bio{
 		width:80%;
 		text-align:center;
+    margin-bottom:1.5rem;
 	}
 	.profile_avatar>img{
 		width:7rem;
@@ -173,27 +184,33 @@ return (
 	.profile_avatar>img:hover{
 	}
 
-	/* CONTENT */
-	.gh-card-content{
-		// background:green;
-		min-width:100%;
-		min-height:5rem;
-		display:flex;
-		flex-direction:column;
-		justify-content:space-around;
-		align-items:center;
-	}
-	.profile_stats{
-		min-width:9rem;
-		border-radius:5px;
-		margin:5px;
-		text-align:center;
-		padding:5px;
-		border-bottom: 1px solid ${colors['primary']};
-		background:rgba(0,0,0,.2);
-	}
+  CONTENT
+  .gh-card-content{
+    background:green;
+    min-width:100%;
+    min-height:5rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .stats_container{
+    min-width:100%;
+    display:Flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+  }
+  .profile_stats{
+    min-width:60vw;
+    border-radius:5px;
+    text-align:center;
+    padding:5px;
+    border-bottom: 2px solid ${colors['primary']};
+    // background:rgba(0,0,0,.2);
+  }
 	.profile_stats:hover{
-
+    margin-left:30%;
 	}
 
 
@@ -208,7 +225,7 @@ return (
 		min-width:100%;
 	}
 	.footer_icon{
-		min-width:60%;
+		min-width:40%;
 		display:flex;
 		flex-direction:row;
 		justify-content:space-around;
@@ -225,8 +242,6 @@ return (
 		border-top-left-radius: 15px;
 		border-bottom-right-radius:15px;
 	}
-
-
 
 }
 
@@ -255,20 +270,17 @@ return (
 	@media screen and (min-width: 20em) {
 
 	.gh-card{
-		min-width:100vw;
-		min-height:100vh;
-
-		display:flex;
-		flex-direction:row;
-		justify-content:center;
-		align-items:center;
-
-
-		background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
-		background-size: 600% 600%;
-		-webkit-animation: AnimationName 30s ease infinite;
-		-moz-animation: AnimationName 30s ease infinite;
-		animation: AnimationName 30s ease infinite;
+    min-width:100vw;
+    min-height:100vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
 
 	}
 
@@ -299,13 +311,14 @@ return (
 		align-items:center;
 	}
 	.profile_avatar>img{
-		width:9rem;
-		height:9rem;
+		width:25vw;
+		height:25vw;
 		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 	}
 	.profile_name{
-		font-size:2rem;
+		font-size:1.5rem;
 		font-weight:bold;
+    border-bottom:1px solid whitesmoke;
 	}
 	.profile_bio{
 		width:70%;
@@ -323,19 +336,28 @@ return (
 		width:70vw;
 		min-height:100vh;
 		position:relative;
+
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+
+    // background:red;
+
 	}
 	.gh-card-stats{
 		display:flex;
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
-		// background:red;
+    // background:blue;
 		min-height:5rem;
+    min-width:100%;
 	}
 	.profile_stats{
 		margin:5px;
-		background:rgba(0,0,0,.5);
-		border-radius:5px;
+    background:rgba(0,0,0,.5);
+		border-radius:1rem;
 		padding:5px;
 		color:whitesmoke;
 		display:flex;
@@ -344,6 +366,7 @@ return (
 		align-items:center;
 		min-width:25%;
 		min-height:4rem;
+    border:2px solid whitesmoke;
 	}
 	.gh-card-projects{
 		// background:pink;
@@ -374,11 +397,13 @@ return (
 		font-size:2rem;
 		text-decoration:none;
 		color:whitesmoke;
+    padding-right:.5rem;
 	}
 	.gh-repo-name{
 		min-width:100%;
 		text-align:center;
 		font-size:2rem;
+    border-bottom:1px solid whitesmoke;
 	}
 	.gh-repo-desc{
 		// background:red;
@@ -417,8 +442,6 @@ return (
 	}
 	/* FOOTER */
 	.gh-card-footer{
-		position:absolute;
-		bottom:3;
 		min-width:100%;
 		display:flex;
 		flex-direction:row;
@@ -426,6 +449,7 @@ return (
 		align-items:center;
 	}
 	.footer_icon{
+    margin-bottom:2rem;
 		background:black;
 		color:whitesmoke;
 		min-height:3rem;
@@ -437,6 +461,8 @@ return (
 		margin-right:3rem;
 		border-radius:10px;
 		text-decoration:none;
+    position:absolute;
+    bottom:0;
 	}
 	.footer_icon>.fa{
 		font-size:2rem;
@@ -445,21 +471,19 @@ return (
 
 /* SMALL DEVICES */
 
-	@media screen and (max-width: 20em) {
+@media only screen and (max-width: 400px) {
 
 	.gh-card{
-		padding:2rem 0 2rem 0;
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-
-		background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
-		background-size: 600% 600%;
-		-webkit-animation: AnimationName 30s ease infinite;
-		-moz-animation: AnimationName 30s ease infinite;
-		animation: AnimationName 30s ease infinite;
-
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    // background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
+    // background-size: 600% 600%;
+    // -webkit-animation: AnimationName 30s ease infinite;
+    // -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
 	}
 
 	@-webkit-keyframes AnimationName {
@@ -477,33 +501,34 @@ return (
 		50%{background-position:72% 100%}
 		100%{background-position:29% 0%}
 	}
-
 	/* CARD HEADER */
 	.gh-card-header{
-		min-width:100vw;
-		min-height:50vh;
-		color:whitesmoke;
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
+    background:gray;
+    min-width:100vw;
+    min-height:30vh;
+    color:whitesmoke;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 	}
+  .profile_avatar{
+    min-width:100vw;
+  }
 	.profile_avatar>img{
-		width:5rem;
-		height:5rem;
+    width:50vw;
+    height:50vw;
 		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 	}
 	.profile_name{
 		min-width:80vw;
 		min-height:3rem;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		font-weight:bold;
 		display:flex;
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
-
-		
 	}
 	.profile_bio{
 		min-width:80vw;
@@ -514,16 +539,18 @@ return (
 
 	/* CARD BODY */
 	.gh-card-body{
+    background:orange;
+    min-width:100vw;
 	}
 	.gh-card-stats{
 		display:flex;
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
-		min-height:5rem;
+    min-width:100%;
+    min-height:40vh;
 	}
 	.profile_stats{
-		margin:5px;
 		border-radius:5px;
 		min-width:80vw;
 		min-height:4rem;
@@ -536,11 +563,12 @@ return (
 		font-size:1.5rem;
 	}
 	.gh-card-projects{
-		margin-top:2rem;
 		display:flex;
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
+    min-width:100%;
+    min-height:15vh;
 	}
 	/* REPO */
 	.gh-repo-container{
@@ -549,17 +577,11 @@ return (
 		min-height:5rem;
 		color:rgba(0,0,0.8);
 		position:relative;
-
-  background: linear-gradient(155deg, #fe4c4c, #fec84c, #00ff1b);
+    background: linear-gradient(155deg, #fe4c4c, #fec84c, #00ff1b);
     background-size: 600% 600%;
-
     -webkit-animation: AnimationName 30s ease infinite;
     -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
-
-
-
-
 	}
 
 
@@ -578,33 +600,32 @@ return (
     50%{background-position:81% 100%}
     100%{background-position:20% 0%}
 }
-
-
-
-
 	.gh-repo-link{
-		color:whitesmoke;
-		position:absolute;
-		top:0;
-		right:0;
+    min-width:100%;
+		color:wihtesmoke;
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
 	}
 	.gh-repo-name{
 		font-weight:bold;
 		border-bottom:1px solid rgba(0,0,0,.3);
+    max-width:90%;
+    font-size:1.5rem;
 	}
 	.gh-repo-desc{
+    min-width:100%;
 	}
 	.gh-repo-desc-text{
-		// background:pink;
 		padding:3px;
 		text-align:center;
 	}
 	.gh-repo-desc-blank{
 		height:0;
-		// background:purple;
 	}
 	.gh-repo-langs{
-		// background:purple;
 		display:flex;
 		flex-direction:row;
 		justify-content:center;
@@ -626,13 +647,10 @@ return (
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
-		margin-top:2rem;
 
 	}
 	.footer_icon{
 		width:50vw;
-		padding:5px;
-
 		background:black;
 		border-radius:5px;
 		display:flex;
@@ -644,7 +662,6 @@ return (
 	}
 	.footer_icon>.fa{
 		font-size:1.5rem;
-		color:orange;
 	}
 
 }
@@ -664,26 +681,26 @@ return (
 
 `
 
-*{
-	box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+	*{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
 
+	/* BIG DEVICES */
+	@media only screen and (min-width: 20em) {
 
-
-/* BIG DEVICES */
-@media screen and (min-width: 20em) {
 
 	.gh-card{
 		font-family: 'system-ui';
 		display:flex;
 		flex-direction:row;
-		justify-content:space-around;
+    justify-content:space-around;
 		align-items:center;
-		width:70vw;
+		width:80vw;
 		min-height:60vh;
 		position:relative;
+    background:transparent;
 
 	}
 	.gh-card>.svg_top{
@@ -716,7 +733,7 @@ return (
 		color: ${colors['secondary']};
 	}
 	.profile_avatar{
-		border:2px solid ${colors['secondary']};
+    border:2px solid ${colors['secondary']};
 		border-radius:50%;
 		padding:5px;
 	}
@@ -735,6 +752,14 @@ return (
 		justify-content:center;
 		align-items:center;
 	}
+  .stats_container{
+    min-width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+  }
 	.profile_stats{
 		min-width:5rem;
 		min-height:3rem;
@@ -777,23 +802,23 @@ return (
 }
 
 /* SMALL DEVICES */
-@media screen and (max-width: 20em) {
+@media only screen and (max-width: 400px) {
 
 	.gh-card{
-		font-family: 'system-ui';
-		display:flex;
-		flex-direction:column;
-		justify-content:space-around;
-		align-items:center;
-		width:100vw;
-		min-height:100vh;
-		position:relative;
-		padding:2rem 0 2rem 0;
+    font-family: 'system-ui';
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+    width:100vw;
+    min-height:100vh;
+    position:relative;
+    padding:2rem 0 2rem 0;
 	}
 	.gh-card>.svg_top{
-		position:absolute;
-		top:0;
-		z-index:-1;
+    position:absolute;
+    top:0;
+    z-index:-1;
 	}
 	.gh-card>.svg_bottom{
 		position:absolute;
@@ -820,13 +845,16 @@ return (
 		color: ${colors['secondary']};
 	}
 	.profile_avatar{
-		border:2px solid ${colors['secondary']};
-		border-radius:50%;
-		padding:5px;
+    min-width:50%;
+    min-height:50%;
+    border:2px solid ${colors['secondary']};
+    border-radius:50%;
+    padding:5px;
+    margin-top:-5rem;
 	}
 	.profile_avatar>img{
-		width:7rem;
-		height:7rem;
+		width:9rem;
+		height:9rem;
 		border-radius:50%;
 	}
 	.profile_avatar>img:hover{
@@ -835,12 +863,18 @@ return (
 	.gh-card-body{
 		min-width:80vw;
 	}
+  .no_bio>.gh-card-body{
+    margin-top: -10rem;
+  }
 	.gh-card-content{
 		display:flex;
 		flex-direction:column;
 		justify-content:center;
 		align-items:center;
 	}
+  .stats_container{
+    min-width:100%;
+  }
 	.profile_stats{
 		min-width:5rem;
 		min-height:3rem;
