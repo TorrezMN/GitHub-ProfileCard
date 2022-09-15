@@ -802,7 +802,7 @@ return (
     font-family: 'system-ui';
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center;
     width:100vw;
     min-height:100vh;
@@ -826,29 +826,34 @@ return (
 		justify-content:center;
 		align-items:center;
 		min-height:50vh;
-		min-width:80vw;
+		min-width:90vw;
+    margin-top:-3rem;
 	}
 	.profile_name{
-		font-size:2rem;
+		font-size:3rem;
 		color: ${colors['secondary']};
 	}
 	.profile_bio{
 		width:80vw;
 		text-align:center;
-		font-size:1rem;
+		font-size:1.5rem;
 		color: ${colors['secondary']};
 	}
 	.profile_avatar{
-    min-width:50%;
-    min-height:50%;
+    min-width:60vw;
+    min-height:60vw;
     border:2px solid ${colors['secondary']};
     border-radius:50%;
     padding:5px;
-    margin-top:-5rem;
+
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
 	}
 	.profile_avatar>img{
-		width:9rem;
-		height:9rem;
+		width:50vw;
+		height:50vw;
 		border-radius:50%;
 	}
 	.profile_avatar>img:hover{
