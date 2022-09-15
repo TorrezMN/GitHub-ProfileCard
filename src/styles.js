@@ -342,7 +342,6 @@ return (
 		justify-content:center;
 		align-items:center;
 
-    // background:red;
 
 	}
 	.gh-card-stats{
@@ -350,7 +349,6 @@ return (
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
-    // background:blue;
 		min-height:5rem;
     min-width:100%;
 	}
@@ -406,10 +404,8 @@ return (
     border-bottom:1px solid whitesmoke;
 	}
 	.gh-repo-desc{
-		// background:red;
 		min-width:100%;
 		width:55vw;
-		// background:green;
 		font-size:1rem;
 		text-align:center;
 		display:flex;
@@ -479,10 +475,10 @@ return (
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    // background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
-    // background-size: 600% 600%;
-    // -webkit-animation: AnimationName 30s ease infinite;
-    // -moz-animation: AnimationName 30s ease infinite;
+    background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
 	}
 
@@ -503,7 +499,6 @@ return (
 	}
 	/* CARD HEADER */
 	.gh-card-header{
-    background:gray;
     min-width:100vw;
     min-height:30vh;
     color:whitesmoke;
@@ -511,13 +506,14 @@ return (
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    margin-top:2rem;
 	}
   .profile_avatar{
     min-width:100vw;
   }
 	.profile_avatar>img{
-    width:50vw;
-    height:50vw;
+    width:60vw;
+    height:60vw;
 		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 	}
 	.profile_name{
@@ -539,7 +535,7 @@ return (
 
 	/* CARD BODY */
 	.gh-card-body{
-    background:orange;
+
     min-width:100vw;
 	}
 	.gh-card-stats{
@@ -642,21 +638,19 @@ return (
 	}
 	/* FOOTER */
 	.gh-card-footer{
-		min-width:100vw;
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-
-	}
-	.footer_icon{
-		width:50vw;
-		background:black;
-		border-radius:5px;
+    min-width:100%;
+    min-height:20vh;
 		display:flex;
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
+
+
+	}
+	.footer_icon{
+    min-width:50vw;
+    margin-left:10%;
+		background:black;
 		text-decoration:none;
 		color:whitesmoke;
 	}
