@@ -170,15 +170,17 @@ return (
 	}
 	.profile_name{
 		font-weight:bold;
+    font-size:3rem;
 	}
 	.profile_bio{
 		width:80%;
 		text-align:center;
     margin-bottom:1.5rem;
+    font-size:1.2rem;
 	}
 	.profile_avatar>img{
-		width:7rem;
-		height:7rem;
+		width:50vw;
+		height:50vw;
 		border-radius:50%;
 	}
 	.profile_avatar>img:hover{
@@ -186,7 +188,6 @@ return (
 
   CONTENT
   .gh-card-content{
-    background:green;
     min-width:100%;
     min-height:5rem;
     display:flex;
@@ -202,12 +203,20 @@ return (
     align-items:center;
   }
   .profile_stats{
-    min-width:60vw;
+    min-width:50vw;
     border-radius:5px;
     text-align:center;
     padding:5px;
     border-bottom: 2px solid ${colors['primary']};
-    // background:rgba(0,0,0,.2);
+    font-size:1.2rem;
+
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .profile_stats>p:first-child{
+    font-size:1.4rem;
   }
 	.profile_stats:hover{
     margin-left:30%;
@@ -342,7 +351,6 @@ return (
 		justify-content:center;
 		align-items:center;
 
-    // background:red;
 
 	}
 	.gh-card-stats{
@@ -350,7 +358,6 @@ return (
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
-    // background:blue;
 		min-height:5rem;
     min-width:100%;
 	}
@@ -406,10 +413,8 @@ return (
     border-bottom:1px solid whitesmoke;
 	}
 	.gh-repo-desc{
-		// background:red;
 		min-width:100%;
 		width:55vw;
-		// background:green;
 		font-size:1rem;
 		text-align:center;
 		display:flex;
@@ -479,10 +484,10 @@ return (
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    // background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
-    // background-size: 600% 600%;
-    // -webkit-animation: AnimationName 30s ease infinite;
-    // -moz-animation: AnimationName 30s ease infinite;
+    background: linear-gradient(223deg, #ffa600, #00cdc2, #0100ff);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
     animation: AnimationName 30s ease infinite;
 	}
 
@@ -503,7 +508,6 @@ return (
 	}
 	/* CARD HEADER */
 	.gh-card-header{
-    background:gray;
     min-width:100vw;
     min-height:30vh;
     color:whitesmoke;
@@ -511,13 +515,14 @@ return (
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    margin-top:2rem;
 	}
   .profile_avatar{
     min-width:100vw;
   }
 	.profile_avatar>img{
-    width:50vw;
-    height:50vw;
+    width:60vw;
+    height:60vw;
 		clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 	}
 	.profile_name{
@@ -532,14 +537,14 @@ return (
 	}
 	.profile_bio{
 		min-width:80vw;
-		min-height:3rem;
-		font-size: 1rem;
+		min-height:15vh;
+		font-size: 1.3rem;
 		text-align:center;
 	}
 
 	/* CARD BODY */
 	.gh-card-body{
-    background:orange;
+
     min-width:100vw;
 	}
 	.gh-card-stats{
@@ -642,21 +647,19 @@ return (
 	}
 	/* FOOTER */
 	.gh-card-footer{
-		min-width:100vw;
-		display:flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
-
-	}
-	.footer_icon{
-		width:50vw;
-		background:black;
-		border-radius:5px;
+    min-width:100%;
+    min-height:20vh;
 		display:flex;
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
+
+
+	}
+	.footer_icon{
+    min-width:50vw;
+    margin-left:10%;
+		background:black;
 		text-decoration:none;
 		color:whitesmoke;
 	}
@@ -808,7 +811,7 @@ return (
     font-family: 'system-ui';
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
+    justify-content:center;
     align-items:center;
     width:100vw;
     min-height:100vh;
@@ -832,29 +835,34 @@ return (
 		justify-content:center;
 		align-items:center;
 		min-height:50vh;
-		min-width:80vw;
+		min-width:90vw;
+    margin-top:-3rem;
 	}
 	.profile_name{
-		font-size:2rem;
+		font-size:3rem;
 		color: ${colors['secondary']};
 	}
 	.profile_bio{
 		width:80vw;
 		text-align:center;
-		font-size:1rem;
+		font-size:1.5rem;
 		color: ${colors['secondary']};
 	}
 	.profile_avatar{
-    min-width:50%;
-    min-height:50%;
+    min-width:60vw;
+    min-height:60vw;
     border:2px solid ${colors['secondary']};
     border-radius:50%;
     padding:5px;
-    margin-top:-5rem;
+
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
 	}
 	.profile_avatar>img{
-		width:9rem;
-		height:9rem;
+		width:50vw;
+		height:50vw;
 		border-radius:50%;
 	}
 	.profile_avatar>img:hover{
