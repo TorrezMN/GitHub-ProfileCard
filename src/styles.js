@@ -170,15 +170,17 @@ return (
 	}
 	.profile_name{
 		font-weight:bold;
+    font-size:3rem;
 	}
 	.profile_bio{
 		width:80%;
 		text-align:center;
     margin-bottom:1.5rem;
+    font-size:1.2rem;
 	}
 	.profile_avatar>img{
-		width:7rem;
-		height:7rem;
+		width:50vw;
+		height:50vw;
 		border-radius:50%;
 	}
 	.profile_avatar>img:hover{
@@ -186,7 +188,6 @@ return (
 
   CONTENT
   .gh-card-content{
-    background:green;
     min-width:100%;
     min-height:5rem;
     display:flex;
@@ -202,12 +203,20 @@ return (
     align-items:center;
   }
   .profile_stats{
-    min-width:60vw;
+    min-width:50vw;
     border-radius:5px;
     text-align:center;
     padding:5px;
     border-bottom: 2px solid ${colors['primary']};
-    // background:rgba(0,0,0,.2);
+    font-size:1.2rem;
+
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .profile_stats>p:first-child{
+    font-size:1.4rem;
   }
 	.profile_stats:hover{
     margin-left:30%;
@@ -528,8 +537,8 @@ return (
 	}
 	.profile_bio{
 		min-width:80vw;
-		min-height:3rem;
-		font-size: 1rem;
+		min-height:15vh;
+		font-size: 1.3rem;
 		text-align:center;
 	}
 
