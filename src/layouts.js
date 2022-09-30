@@ -1,4 +1,56 @@
 
+
+
+
+
+
+export const win_layout =(style)=>{
+
+	return(
+			`
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <!-- Awesome Fonts -->
+            <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous"
+            />
+            <style>
+            ${style}
+            </style>
+          </head>
+        <body>
+          <div class='gh-card'>
+            <div class='gh-main-title'>
+
+            </div>
+            <div class='gh-window-container'>
+              <div class='gh-left-window'>
+
+              </div>
+              <div class='gh-right-window'>
+
+              </div>
+            </div>
+            <div class='gh-footer'>
+
+
+            </div>
+          </div>
+
+
+        </body>
+        </html>
+
+					`)
+};
+
 export const repo_layout = (proj)=>{
 	// Project basic layout for github repos.
 	let repo_template = document.createElement('template');

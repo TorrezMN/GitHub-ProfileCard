@@ -1,4 +1,4 @@
-import {basic_style, horizontal_style, horizontal_projects_styles} from './styles.js';
+import {basic_style, horizontal_style, horizontal_projects_styles, win_styles} from './styles.js';
 import create_template from './template_engine.js';
 
 import {repo_layout} from './layouts.js';
@@ -59,6 +59,7 @@ class GH_Card extends HTMLElement {
 		this.template_styles['normal'] = basic_style(this.component_config['colors']);
 		this.template_styles['horizontal'] = horizontal_style(this.component_config['colors']);
 		this.template_styles['horizontal-projects'] = horizontal_projects_styles(this.component_config['colors']);
+		this.template_styles['win'] = win_styles();
 	}
 
 	set_template(){
