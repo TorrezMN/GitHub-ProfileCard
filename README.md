@@ -6,13 +6,13 @@ Small component to display GitHub profiles in various ways. Completely responsiv
 
 You can install this component in your project with the fallowing command:
 
-```
+```console
 npm i @torrez_mn/gh-card
 ```
 
 or by:
 
-```
+```console
 npm install @torrez_mn/gh-card
 ```
 
@@ -21,7 +21,7 @@ npm install @torrez_mn/gh-card
 In your component import the component as fallows:
 
 
-```
+```JavaScript
 import '@torrez_mn/gh-card';
 
 ```
@@ -36,7 +36,7 @@ Now you can use the component in three diferent ways.
 Create a small card with a brief description and some statistical data of the user.
 
 
-```
+```JavaScript
 {/* REACT DEMO */}
 
 {/* IMPORTS */}
@@ -67,7 +67,7 @@ export default MyComponent;
 
 Produces the same result as the normal version but horizontally.
 
-```
+```JavaScript
 
 {/* REACT DEMO */}
 
@@ -99,7 +99,7 @@ export default MyComponent;
 Produce a full screen landscape version with public projects on github. Randomly displays data from the user's public projects and the languages used.
 
 
-```
+```JavaScript
 
 {/* REACT DEMO */}
 
