@@ -1,4 +1,107 @@
 
+export function win_styles (colors){
+
+
+return (
+
+
+`
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background:blue;
+}
+
+
+
+/* BIG DEVICES */
+@media screen and (min-width: 20em) {
+
+.gh-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+
+  min-width:100vw;
+  min-height:100vh;
+
+  border:2px solid gray;
+  position:relative;
+
+
+
+}
+.gh-main-title{
+  position:absolute;
+  top:2rem;
+  background:gray;
+  color:black;
+  
+  border:2px solid gray;
+  color:whitesmoke;
+  min-width:100%;
+  min-height:3rem;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.gh-window-container{
+
+}
+
+.gh-left-window{
+
+}
+
+.gh-right-window{
+
+
+}
+
+.gh-footer{
+
+
+
+}
+
+
+}
+
+
+
+/* SMALL DEVICES */
+
+@media only screen and (max-width: 400px) {
+
+h3{
+background:orange;
+
+}
+
+}
+
+
+`
+
+
+)
+}
+
+
+
+
+
+
+
+
 export function basic_style (colors){
 
 

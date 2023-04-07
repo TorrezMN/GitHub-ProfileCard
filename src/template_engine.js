@@ -1,5 +1,5 @@
 
-import {basic_layout,horizontal_layout, horizontal_projects_layout} from './layouts.js';
+import {basic_layout,horizontal_layout, horizontal_projects_layout, win_layout} from './layouts.js';
 
 
 function create_template(mode ,style, color){
@@ -14,6 +14,9 @@ function create_template(mode ,style, color){
 			break;
 		case 'horizontal-projects':
 			return(horizontal_projects_layout(style, color));
+			break;
+		case 'win':
+			return(win_layout(style));
 			break;
 	}
 
