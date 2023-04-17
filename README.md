@@ -2,9 +2,15 @@
 
 Small component to display GitHub profiles in various ways. Completely responsive.
 
-<img src="https://github.com/TorrezMN/GitHub-ProfileCard/blob/HEAD/docs/card1.png" width="50%" height="100%"> 
-<img src="https://github.com/TorrezMN/GitHub-ProfileCard/blob/HEAD/docs/card2.png" width="100%" height="100%">
-<img src="https://github.com/TorrezMN/GitHub-ProfileCard/blob/HEAD/docs/card3.png" width="100%" height="100%">
+<img src="https://raw.githubusercontent.com/TorrezMN/GitHub-ProfileCard/HEAD/docs/card1.png" width="50%" height="100%"> 
+<img src="https://raw.githubusercontent.com/TorrezMN/GitHub-ProfileCard/HEAD/docs/card2.png" width="100%" height="100%"> 
+<img src="https://raw.githubusercontent.com/TorrezMN/GitHub-ProfileCard/HEAD/docs/card3.png" width="100%" height="100%"> 
+
+
+
+
+
+
 
 
 ## Installation
