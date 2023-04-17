@@ -4,9 +4,9 @@ Small component to display GitHub profiles in various ways. Completely responsiv
 
 
 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;">
-<img src="docs/image1.png"  width="50%" height="50%">
-<img src="docs/image2.png"  width="100%" height="100%">
-<img src="docs/image3.png"  width="100%" height="100%">
+<img src="docs/card1.png"  width="50%" height="50%">
+<img src="docs/card2.png"  width="100%" height="100%">
+<img src="docs/card3.png"  width="100%" height="100%">
 </div >
 
 
