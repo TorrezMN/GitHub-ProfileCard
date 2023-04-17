@@ -1,6 +1,6 @@
 {
   "name": "@torrez_mn/gh-card",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Small component to display Github profiles.",
   "main": "src/index.js",
   "bin": "src/index.js",
