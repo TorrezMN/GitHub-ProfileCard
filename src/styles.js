@@ -1,11 +1,5 @@
-
-export function win_styles (colors){
-
-
-return (
-
-
-`
+export function win_styles(colors) {
+  return `
 
 *{
   box-sizing: border-box;
@@ -89,26 +83,11 @@ background:orange;
 }
 
 
-`
-
-
-)
+`;
 }
 
-
-
-
-
-
-
-
-export function basic_style (colors){
-
-
-return (
-
-
-`
+export function basic_style(colors) {
+  return `
 
 *{
 	box-sizing: border-box;
@@ -192,11 +171,11 @@ return (
 		margin:5px;
 		text-align:center;
 		padding:5px;
-		border-bottom: 1px solid ${colors['primary']};
+		border-bottom: 1px solid ${colors["primary"]};
     transition:.5s;
 	}
 	.profile_stats:hover{
-    background: ${colors['primary']};
+    background: ${colors["primary"]};
     color:whitesmoke;
     border-radius:10px;
 	}
@@ -219,13 +198,13 @@ return (
 		align-items:center;
 		text-decoration:none;
 		padding:5px;
-    border:2px solid  ${colors['primary']};
-    color: ${colors['primary']};
+    border:2px solid  ${colors["primary"]};
+    color: ${colors["primary"]};
 		transition:.5s;
 	}
 	.footer_icon:hover{
-		background:${colors['primary']};
-		color: ${colors['secondary']};
+		background:${colors["primary"]};
+		color: ${colors["secondary"]};
 		border-top-left-radius: 15px;
 		border-bottom-right-radius:15px;
 	}
@@ -310,7 +289,7 @@ return (
     border-radius:5px;
     text-align:center;
     padding:5px;
-    border-bottom: 2px solid ${colors['primary']};
+    border-bottom: 2px solid ${colors["primary"]};
     font-size:1.2rem;
 
     display:flex;
@@ -344,13 +323,13 @@ return (
 		align-items:center;
 		text-decoration:none;
 		padding:5px;
-		border:2px solid  ${colors['primary']};
-		color: ${colors['primary']};
+		border:2px solid  ${colors["primary"]};
+		color: ${colors["primary"]};
 		transition:.5s;
 	}
 	.footer_icon:hover{
-		background:${colors['primary']};
-		color: ${colors['secondary']};
+		background:${colors["primary"]};
+		color: ${colors["secondary"]};
 		border-top-left-radius: 15px;
 		border-bottom-right-radius:15px;
 	}
@@ -358,19 +337,11 @@ return (
 }
 
 
-`
-
-
-)
+`;
 }
 
-export function horizontal_projects_styles (colors){
-
-
-return (
-
-
-`
+export function horizontal_projects_styles(colors) {
+  return `
 
 	*{
 		box-sizing: border-box;
@@ -773,19 +744,11 @@ return (
 }
 }
 
-`
-)
+`;
 }
 
-
-
-export function horizontal_style (colors){
-
-
-return (
-
-
-`
+export function horizontal_style(colors) {
+  return `
 
 	*{
 		box-sizing: border-box;
@@ -830,16 +793,16 @@ return (
 	}
 	.profile_name{
 		font-size:2rem;
-		color: ${colors['secondary']};
+		color: ${colors["secondary"]};
 	}
 	.profile_bio{
 		min-width:50%;
 		text-align:center;
 		font-size:1rem;
-		color: ${colors['secondary']};
+		color: ${colors["secondary"]};
 	}
 	.profile_avatar{
-    border:2px solid ${colors['secondary']};
+    border:2px solid ${colors["secondary"]};
 		border-radius:50%;
 		padding:5px;
 	}
@@ -870,9 +833,9 @@ return (
 		min-width:5rem;
 		min-height:3rem;
 		margin:1rem;
-		border-bottom: 1px solid ${colors['primary']};
+		border-bottom: 1px solid ${colors["primary"]};
 		text-align:center;
-		color: ${colors['secondary']};
+		color: ${colors["secondary"]};
 	}
 	.profile_stats:hover{
 
@@ -893,14 +856,14 @@ return (
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
-		border:2px solid  ${colors['primary']};
-		color: ${colors['primary']};
+		border:2px solid  ${colors["primary"]};
+		color: ${colors["primary"]};
 		border-radius:5px;
 		transition:.5s;
 	}
 	.footer_icon:hover{
-		background:${colors['primary']};
-		color: ${colors['secondary']};
+		background:${colors["primary"]};
+		color: ${colors["secondary"]};
 
 	}
 
@@ -943,18 +906,18 @@ return (
 	}
 	.profile_name{
 		font-size:3rem;
-		color: ${colors['secondary']};
+		color: ${colors["secondary"]};
 	}
 	.profile_bio{
 		width:80vw;
 		text-align:center;
 		font-size:1.5rem;
-		color: ${colors['secondary']};
+		color: ${colors["secondary"]};
 	}
 	.profile_avatar{
     min-width:60vw;
     min-height:60vw;
-    border:2px solid ${colors['secondary']};
+    border:2px solid ${colors["secondary"]};
     border-radius:50%;
     padding:5px;
 
@@ -990,9 +953,9 @@ return (
 		min-width:5rem;
 		min-height:3rem;
 		margin:1rem;
-		border-bottom: 1px solid ${colors['primary']};
+		border-bottom: 1px solid ${colors["primary"]};
 		text-align:center;
-		color: ${colors['secondary']};
+		color: ${colors["secondary"]};
 	}
 	.profile_stats:hover{
 	}
@@ -1013,21 +976,18 @@ return (
 		flex-direction:row;
 		justify-content:center;
 		align-items:center;
-		border:2px solid  ${colors['primary']};
-		color: ${colors['primary']};
+		border:2px solid  ${colors["primary"]};
+		color: ${colors["primary"]};
 		border-radius:5px;
 		transition:.5s;
 	}
 	.footer_icon:hover{
-		background:${colors['primary']};
-		color: ${colors['secondary']};
+		background:${colors["primary"]};
+		color: ${colors["secondary"]};
 
 	}
 
 }
 
-`
-)
+`;
 }
-
-
