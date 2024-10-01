@@ -33,38 +33,6 @@ import '@torrez_mn/gh-card';
 Now you can use the component in three diferent ways.
 
 
-### Normal
-
-> ***See a *Code Sandbox* React demo [here.](https://wl612z.csb.app/)***
-
-Create a small card with a brief description and some statistical data of the user.
-
-
-```JavaScript
-{/* REACT DEMO */}
-
-{/* IMPORTS */}
-import '@torrez_mn/gh-card';
-
-function MyComponent() {
-	return (
-		<div>
-
-			{/* COMPONENT */}
-			<gh-card 
-			gh-user='yogonza524'
-			gh-mode='normal' 
-			gh-primary-color='rgba(0,23,255,.5)'
-			gh-secondary-color='whitesmoke'
-			/>
-
-		</div>
-	);
-}
-
-export default MyComponent;
-
-```
 ### Normal - Horizontal
 
 > ***See a *Code Sandbox* React demo [here.](https://t2r116.csb.app/)***
